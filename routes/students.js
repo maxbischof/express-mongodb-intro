@@ -10,7 +10,6 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  console.log(req.body) // {name: <String>}
   const student = { ...req.body, id: uuidv4() }
   db.students.push(student)
   saveDb((error) => res.json(error ?? student))
