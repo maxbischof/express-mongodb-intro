@@ -1,165 +1,40 @@
 {
-  "buddyList": [
-    [
-      "Anna-Lea",
-      "Ann-Kristin"
-    ],
-    [
-      "Carolin",
-      "Constantin"
-    ],
-    [
-      "Deniz",
-      "Dennis J."
-    ],
-    [
-      "Dennis W.",
-      "Iver"
-    ],
-    [
-      "Jan Henrik",
-      "Jennifer"
-    ],
-    [
-      "Karsten",
-      "Martin"
-    ],
-    [
-      "Maximilian B.",
-      "Maximilian G."
-    ],
-    [
-      "Nina",
-      "Sören"
-    ]
-  ],
-  "codingTeams": [
+  "students": [
     {
-      "title": "Team 1",
-      "names": [
-        "Anni",
-        "Denni W.",
-        "Maxi",
-        "Jenny"
-      ]
+      "name": "Karsten",
+      "id": "0b16f99d-0859-4e5f-ba60-67dec911b8ab"
     },
     {
-      "title": "Team 2",
-      "names": [
-        "Deniz",
-        "Constantin",
-        "Martin",
-        "Sören"
-      ]
+      "name": "Martin",
+      "id": "317706f1-3b03-4db0-a423-29c6a2d49440"
     },
     {
-      "title": "Team 3",
-      "names": [
-        "Caro",
-        "Karsten",
-        "Nina",
-        "Anna"
-      ]
+      "name": "Caro",
+      "id": "719fc0c4-8f20-4563-aac0-8b40cdd45837"
     },
     {
-      "title": "Team 4",
-      "names": [
-        "Dennis J.",
-        "Iver",
-        "Jan",
-        "Max"
-      ]
+      "name": "Jennifer",
+      "id": "75d05031-ba4e-4ff1-9c63-d72aed6950f2"
     }
   ],
-  "energyData": [
+  "energy": [
     {
-      "you": 100,
-      "students": 90,
-      "timeStamp": "10:00"
+      "student": "317706f1-3b03-4db0-a423-29c6a2d49440",
+      "energy": 75,
+      "timestamp": "Fri, 07 Aug 2020 09:55:42 GMT",
+      "id": "a711b63b-bd9c-4197-b62d-556749156396"
     },
     {
-      "you": 75,
-      "students": 88,
-      "timeStamp": "15:30"
+      "student": "0b16f99d-0859-4e5f-ba60-67dec911b8ab",
+      "energy": 100,
+      "timestamp": "Fri, 07 Aug 2020 09:56:12 GMT",
+      "id": "b6e68e88-2054-4a27-9a9d-92bb5cc2cefa"
     },
     {
-      "you": 92,
-      "students": 60,
-      "timeStamp": "16:15"
-    },
-    {
-      "you": 40,
-      "students": 55,
-      "timeStamp": "18:25"
-    },
-    {
-      "you": 25,
-      "students": 22,
-      "timeStamp": "19:00"
-    },
-    {
-      "you": 10,
-      "students": 1,
-      "timeStamp": "22:00",
-      "id": "300b6d1c-3817-45a4-8967-2b7a3f6dbb31"
-    },
-    {
-      "you": 100,
-      "students": 100,
-      "timeStamp": "22:00",
-      "id": "379f885e-d9ce-4157-9df3-8f05037cc872"
-    },
-    {
-      "you": 100,
-      "students": 100,
-      "timeStamp": "22:00",
-      "id": "4883cbe7-3888-4713-bf1c-f77bc072b47c"
-    },
-    {
-      "you": 100,
-      "id": "93804418-af62-44eb-b97c-7aee46bdfbf1"
-    },
-    {
-      "students": 100,
-      "id": "8e8a82cb-a37a-4f12-a7a3-e636937d596d"
-    },
-    {
-      "students": 3,
-      "id": "2bb4120a-7696-4b78-a9f0-e6efdf6f0f3b"
-    },
-    {
-      "you": 3,
-      "id": "7e8e1825-6870-4e8a-ab7f-91432af22cca"
-    },
-    {
-      "you": 3,
-      "id": "ab73d7ad-4a70-40aa-ba8c-68143833cc01"
-    },
-    {
-      "you": 3,
-      "id": "17f014a8-4fec-4cf3-b9d3-be140756495a"
-    }
-  ],
-  "energyButtons": [
-    100,
-    75,
-    50,
-    25
-  ],
-  "journalEntries": [
-    {
-      "date": "YESTERDAY",
-      "rating": 3,
-      "comprehension": 7,
-      "motto": "Thats life in the city",
-      "notes": "Si sine causa? quae fuerit causa, mox videro interea hoc tenebo, si mihi. Et quidem se repellere, idque instituit docere sic omne animal,simul atque."
-    },
-    {
-      "date": "12.07.2020",
-      "rating": 3,
-      "comprehension": 7,
-      "motto": "One step at a time",
-      "notes": "Torquatos nostros quos dolores suscipiantur maiorum"
+      "student": "719fc0c4-8f20-4563-aac0-8b40cdd45837",
+      "energy": 100,
+      "timestamp": "Fri, 07 Aug 2020 10:22:55 GMT",
+      "id": "1b84fefc-03c0-4a30-8368-69e2a42bbc09"
     }
   ]
 }
