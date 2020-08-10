@@ -1,30 +1,38 @@
 import express from 'express'
-import db from '../db.json'
-import { saveDb } from '../fsUtils'
-import { v4 as uuidv4 } from 'uuid'
+import Energy from '../models/Energy'
 
 const router = express.Router()
 
+// router.get('/:studentId', (req, res) => {
+//   const { studentId } = req.params.studentId
+
+//   const you = getStudentEnergyById(studentId)
+//   const students = getAverageEnergy()
+//   const timestamp = getEarliestTimestamp()
+
+//   res.json({
+//     you,
+//     students,
+//     timestamp,
+//   })
+// })
+
+router.get('/', (req, res) => {
+  Energy.find()
+    .then((studentEnergy) => res.json(studentEnergy))
+})
+
 router.get('/:studentId', (req, res) => {
-  const { studentId } = req.params
-
-  const you = getStudentEnergyById(studentId)
-  const students = getAverageEnergy()
-  const timestamp = getEarliestTimestamp()
-
-  res.json({
-    you,
-    students,
-    timestamp,
-  })
+  Energy.find({studentId: req.params.studentId})
+    .then((studentEnergy) => res.json(studentEnergy))
 })
 
 router.post('/', (req, res) => {
-  const date = new Date()
-  const timestamp = date.toUTCString()
-  const newEntry = { ...req.body, timestamp, id: uuidv4() }
-  db.energy.push(newEntry)
-  saveDb((error) => res.json(error ?? newEntry))
+  Energy.create({studentId: req.body.studentId,
+    value: req.body.value, 
+    timestamp: new Date()})
+    .then((energy) => res.json(energy))
+    .catch((error) => res.json(error))
 })
 
 export default router

@@ -1,6 +1,12 @@
 import express from 'express'
 import energyRoute from './routes/energy'
 import studentsRoute from './routes/students'
+import mongoose from 'mongoose'
+
+mongoose.connect('mongodb://localhost:27017/student-companion-app', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
 
 const server = express()
 server.use(express.json()) // middleware to get body from request
