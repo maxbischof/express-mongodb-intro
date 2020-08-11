@@ -20,24 +20,21 @@ const router = express.Router()
 router.get('/avg/:studentId', (req, res) => {
   Energy.find({studentId: req.params.studentId})
     .then((studentEnergys) => {
-      const allEnergys = studentEnergys.map(energy => {
-        const avgEnergy = Energy.find({
+      const allEnergyPromises = studentEnergys.map(energy => {
+        return Energy.find({
           "timestamp": {"$gte": new Date(new Date(energy.timestamp).getTime() - 15*60000), 
           "$lt": new Date(new Date(energy.timestamp).getTime() + 15*60000)}})
           .then(timeSlotEnergy => {
             const timeSlotEnergySum = timeSlotEnergy.reduce((acc, cur) => acc.value + cur.value)
-            console.log(timeSlotEnergySum)
 
             const timeSlotEnergyAvg = timeSlotEnergySum / timeSlotEnergy.length
-            console.log(timeSlotEnergyAvg)
 
-            return timeSlotEnergyAvg
+            return {...energy._doc, avgEnergy: timeSlotEnergyAvg}
           })
-
-        return {...energy._doc, avgEnergy: avgEnergy}
-      })
-    res.json(allEnergys)
-  })
+        })
+      Promise.all(allEnergyPromises).then((allEnergys) => res.json(allEnergys))
+    })
+})
 
 router.get('/', (req, res) => {
   Energy.find()
